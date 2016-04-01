@@ -184,7 +184,7 @@ public class IntegrationTestSetup {
       }
 
       try {
-        NaviLogger.warning("[i] Generating constraints  for %s.", databaseName);
+        NaviLogger.info("[i] Generating constraints  for %s.", databaseName);
         connection.prepareStatement(AbstractSQLProvider.parseResourceAsSQLFile(
             this.getClass().getResourceAsStream(TEST_DATA_DIRECTORY + "database_constraints.sql")))
             .execute();

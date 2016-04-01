@@ -908,6 +908,7 @@ public class PostgreSQLProviderTest extends ExpensiveBaseTest {
       final CTagManager tagManager = getProvider().loadTagManager(TagType.VIEW_TAG);
       final CTag tag = tagManager.getRootTag().getChildren().get(0).getObject();
       getProvider().tagView(view, tag);
+      getProvider().removeTag(view, tag);
     } else {
       getProvider().removeTag(view, viewTags.iterator().next());
     }
